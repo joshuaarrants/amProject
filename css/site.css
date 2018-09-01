@@ -1,0 +1,16 @@
+div {
+    background-color: lightgray;
+    padding: 1px;
+    text-align: left;
+    min-width: 450px;
+    min-height: 100px;
+  }
+  
+  .row {
+    min-width: 450px;
+    padding: 1px;
+  }
+  
+  .col {
+    min-width: 450px;
+  }
