@@ -1,89 +1,172 @@
 <!DOCTYPE HTML>
+
 <html lang="en">
+
   <head>
+
+
 
     <title>JavaScript Test</title>
 
+
+
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+
   <link rel="stylesheet" href="css/site.css">
-  
+
+  <!-- Bootstrap Stylesheet -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
   <!-- JavaScript Libraries -->
-  <script src="../knockout-3.4.2.js"></script>
+
+  <script src="knockout-3.4.2.js"></script>
+
     
+
   </head>
+
   
+
 <body>
+
   <header>
-    <div id="logo">Logo</div>
-    <nav>
-      <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/link">Page</a></li>
+
+   <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+
+      <ul class="navbar-nav">
+
+        <li class="nav-item active">
+	  <a class="nav-link" href="#">Home</a>
+	</li>
+
+        <li class="nav-item">
+	  <a class="nav-link" href="#">Page</a>
+	</li>
       </ul>
     </nav>
+
   </header>
+
   
+
   <section>
-  <div class="container-fluid">   Container div
-    <div class="row" id="questionNumber">
-        question will be placed here
-	<hr />
-    </div>
+  <h2>JavaScript Test</h2>
+
+
+<div class="container-fluid">
+    <label for="txtQuestion">Question</label>
+    <input type="text" data-bind="value: question" id="txtQuestion">
+</div>
+
+  
   <div class="row">
+
     <div class="col-lg-8">
+
      <div class="input-group">
+
       <span class="input-group-addon">
+
         A<input type="radio" aria-label="A">
+
       </span>
+
       	<input type="text" class="form-control" aria-label="A">
+
       </div><!-- /input-group -->
+
     </div><!-- /.col-lg-8 -->
+
    </div><!-- /.row -->
 
+
 <div class="row">
+
     <div class="col-lg-8">
+
      <div class="input-group">
+
       <span class="input-group-addon">
+
         B<input type="radio" aria-label="B">
+
       </span>
+
       	<input type="text" class="form-control" aria-label="B">
+
       </div><!-- /input-group -->
+
     </div><!-- /.col-lg-8 -->
+
    </div><!-- /.row -->
 
+
 <div class="row">
+
     <div class="col-lg-8">
+
      <div class="input-group">
+
       <span class="input-group-addon">
+
         C<input type="radio" aria-label="C">
+
       </span>
+)
       	<input type="text" class="form-control" aria-label="C">
+
       </div><!-- /input-group -->
+
     </div><!-- /.col-lg-8 -->
+
    </div><!-- /.row -->
 
-<div class="row">
+
+)<div class="row">
+
     <div class="col-lg-8">
+
      <div class="input-group">
+
       <span class="input-group-addon">
+
         D<input type="radio" aria-label="D">
+
       </span>
+
       	<input type="text" class="form-control" aria-label="D">
+
       </div><!-- /input-group -->
+
     </div><!-- /.col-lg-8 -->
+
    </div><!-- /.row -->
 
 <div class="row">
+
   <button type="button" class="btn btn-large navbar-btn">Next</button>
 
 </div>
- 
-</div>
-  
+
   </section>
 
-  
-  
-  
+<script>
+
+  function QuestionViewModel() {
+       
+	this.question = ko.observable("What pattern in JavaScript restricts instantiation of a class to a single object?);
+	this.answerA = ko.observable("Constructor Pattern");
+	this.answerB = ko.observable("Singleton Pattern");
+	this.answerC = ko.observable("Prototype Pattern");
+	this.answerD = ko.observable("Mixin Pattern");
+	this.correctAnswer = ko.observable("answerB");
+  }
+
+  ko.applyBindings(new QuestionViewModel());
+
+</script>
+
+
 </body>
+
 </html>
