@@ -52,8 +52,7 @@ var questionArray = ko.observableArray([
   ansA: "Try",
   ansB: "Catch",
   ansC: "Else",
-  ansD: "Break",
-  corAns: "ansD"
+  ansD: "Break",  corAns: "ansD"
   },
 
 
@@ -73,8 +72,8 @@ var questionArray = ko.observableArray([
   ques: "Which of the following is true about variable naming conventions in JavaScript?",
   ansA: "You should not use any of the JavaScript reserved keyword as variable name.",
   ansB: "JavaScript variable names should not start with a numeral 0 − 9.",
-  ansC: "Both of the above. ;",
-  ansD: "None of the above,
+  ansC: "Both of the above.",
+  ansD: "None of the above",
   corAns: "ansC"
   },
 
