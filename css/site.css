@@ -1,16 +1,22 @@
-div {
-    background-color: lightgray;
-    padding: 1px;
-    text-align: left;
-    min-width: 450px;
-    min-height: 100px;
-  }
-  
-  .row {
-    min-width: 450px;
-    padding: 1px;
-  }
-  
-  .col {
-    min-width: 450px;
-  }
+/* div {
+  background-color: lightblue;
+  padding: 1px;
+  text-align: left;
+  min-width: 450px;
+  min-height: 100px;
+} */
+
+/* Class modifiers */
+
+/* .row {
+  min-width: 450px;
+  padding: 1px;
+}
+
+.rowCenter {
+  -moz-box-align: center;
+}
+
+.col {
+  min-width: 450px;
+} */
