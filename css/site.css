@@ -6,6 +6,10 @@
   min-height: 100px;
 } */
 
+h2 {
+  align-content: center;
+}
+
 /* Class modifiers */
 
 /* .row {

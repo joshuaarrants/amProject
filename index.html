@@ -54,59 +54,89 @@
 
   </header>
 
-  <div class="container-fluid">
-    <h2 class="justify-content-center">Arrants/Maxwell JavaScript Test</h2>
+
+  <h2 class="container-fluid">Arrants/Maxwell JavaScript Test</h2>
+
+
+  <!-- Question with bootstrap theme (trying to data bind) -->
+  <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text">Question</span>
+    </div>
+    <input class="form-control" type="text" data-bind="value: question" id="txtQuestion">
   </div>
 
-  <div class="container-fluid">
-    <label for="txtQuestion">Question</label>
-    <input class="container" type="text" data-bind="value: question" id="txtQuestion">
+  <br>
+
+  <!-- end question with bootstrap theme -->
+
+  <br>
+  <div class="form-group">
+    <!-- Answer A -->
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text">
+          A.
+        </span>
+      </div>
+      <div class="radio input-group-prepend">
+        <div class="input-group-text">
+          <input type="radio">
+        </div>
+      </div>
+      <input type="text" class="form-control" data-bind="value: answerA" id="answerA">
+    </div>
+    <!-- End answer A -->
+
+    <!-- Answer B -->
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text">
+          B.
+        </span>
+      </div>
+      <div class="radio input-group-prepend">
+        <div class="input-group-text">
+          <input type="radio">
+        </div>
+      </div>
+      <input type="text" class="form-control" data-bind="value: answerB" id="answerB">
+    </div>
+    <!-- End answer B -->
+
+    <!-- Answer C -->
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text">
+          C.
+        </span>
+      </div>
+      <div class="radio input-group-prepend">
+        <div class="input-group-text">
+          <input type="radio">
+        </div>
+      </div>
+      <input type="text" class="form-control" data-bind="value: answerC" id="answerC">
+    </div>
+    <!-- End answer C -->
+
+    <!-- Answer D -->
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text">
+          D.
+        </span>
+      </div>
+      <div class="radio input-group-prepend">
+        <div class="input-group-text">
+          <input type="radio">
+        </div>
+      </div>
+      <input type="text" class="form-control" data-bind="value: answerD" id="answerD">
+    </div>
+    <!-- End answer D -->
   </div>
-  <div class="row">
-    <div class="col-lg-12">
-      <div class="input-group">
-        <span class="input-group-addon">
-          A<input type="radio" aria-label="A">
-        </span>
-        <input type="text" class="form-control" aria-label="A">
-      </div><!-- /input-group -->
-    </div><!-- /.col-lg-8 -->
-  </div><!-- /.row -->
 
-  <div class="row">
-    <div class="col-lg-12">
-      <div class="input-group">
-        <span class="input-group-addon">
-          B<input type="radio" aria-label="B">
-        </span>
-        <input type="text" class="form-control" aria-label="B">
-      </div><!-- /input-group -->
-
-    </div><!-- /.col-lg-8 -->
-
-  </div><!-- /.row -->
-
-  <div class="row">
-    <div class="col-lg-12">
-      <div class="input-group">
-        <span class="input-group-addon">
-          C<input type="radio" aria-label="C">
-        </span>
-        <input type="text" class="form-control" aria-label="C">
-      </div><!-- /input-group -->
-    </div><!-- /.col-lg-8 -->
-  </div><!-- /.row -->
-
-  <div class="row">
-    <div class="col-lg-12">
-      <div class="input-group">
-        <span class="input-group-addon">
-          D<input type="radio" aria-label="D">
-        </span>
-        <input type="text" class="form-control" aria-label="D">
-      </div><!-- /input-group -->
-    </div><!-- /.col-lg-8 -->
-  </div><!-- /.row -->
 
   <div class="btn-group container-fluid justify-content-center m-3">
     <button type="submit" class="btn btn-primary btn-lg">Submit</button>
