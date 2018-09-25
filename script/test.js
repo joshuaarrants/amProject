@@ -8,22 +8,22 @@
     {
       question: '1.	What pattern in JavaScript restricts instantiation of a class to a single object?',
       answers: ['A. Constructor Pattern', 'B. Singleton Pattern', 'C. Prototype Pattern', 'D. Mixin Pattern'],
-      cAnswer: 'Singleton Pattern'
+      answer: 'Singleton Pattern'
     },
     {
       question: '2.	Which looping statement is known as JavaScript’s basic loop?',
       answers: ['A. for loop', 'B. do/while loop', 'C. while loop', 'D. for/in loop'],
-      cAnswer: 'while loop'
+      answer: 'while loop'
     },
     {
       question: '3.	The _______ method returns a string that follows the syntax of the function declaration statement.',
       answers: ['A. toString()', 'B. bind()', 'C. call()', 'D. apply()'],
-      cAnswer: 'toString()'
+      answer: 'toString()'
     },
     {
       question: '4.	The _______ pattern aims to encapsulate method invocation, request, or operations into a single object and gives us the ability to both parameterize and pass method calls around that can be executed at our discretion.',
       answers: ['A. Prototype', 'B. Factory', 'C. Command', 'D. Facade'],
-      cAnswer: 'Command'
+      answer: 'Command'
     },
     {
       question: '5. JavaScript’s reserve word ______ causes the innermost enclosing loop or switch statement to exit immediately.',
