@@ -1,132 +1,81 @@
-﻿// create an observable array with 10 objects (questions)
+﻿var QuizViewModel = function () {
 
-function questionViewModel() {
-  this.question = ko.observableArray([
+  //declared observables
+  var self = this;
+
+  // observableArray of our JavaScript Trivia Questions
+  self.questions = ko.observableArray([
     {
-      quesNum: 1,
-      ques:
-        'What pattern in JavaScript restricts instantiation of a class to a single object?',
-      ansA: 'Constructor Pattern',
-      ansB: 'Singleton Pattern',
-      ansC: 'Prototype Pattern ',
-      ansD: 'Mixin Pattern',
-      corAns: 'ansB'
+      question: '1.	What pattern in JavaScript restricts instantiation of a class to a single object?',
+      answers: ['A. Constructor Pattern', 'B. Singleton Pattern', 'C. Prototype Pattern', 'D. Mixin Pattern'],
+      cAnswer: 'Singleton Pattern'
     },
-
     {
-      quesNum: 2,
-      ques: 'Which looping statement is known as JavaScript’s basic loop?',
-      ansA: 'for loop',
-      ansB: 'do/while loop',
-      ansC: 'while loop ',
-      ansD: 'for/in loop',
-      corAns: 'ansC'
+      question: '2.	Which looping statement is known as JavaScript’s basic loop?',
+      answers: ['A. for loop', 'B. do/while loop', 'C. while loop', 'D. for/in loop'],
+      cAnswer: 'while loop'
     },
-
     {
-      quesNum: 3,
-      ques:
-        'The _______ method returns a string that follows the syntax of the function declaration statement.',
-      ansA: 'toString()',
-      ansB: 'bind()',
-      ansC: 'call()',
-      ansD: 'apply()',
-      corAns: 'ansA'
+      question: '3.	The _______ method returns a string that follows the syntax of the function declaration statement.',
+      answers: ['A. toString()', 'B. bind()', 'C. call()', 'D. apply()'],
+      cAnswer: 'toString()'
     },
-
     {
-      quesNum: 4,
-      ques:
-        'The _______ pattern aims to encapsulate method invocation, request, or operations into a single object and gives us the ability to both parameterize and pass method calls around that can be executed at our discretion. ',
-      ansA: 'Prototype',
-      ansB: 'Factory',
-      ansC: 'Command',
-      ansD: 'Façade',
-      corAns: 'ansC'
+      question: '4.	The _______ pattern aims to encapsulate method invocation, request, or operations into a single object and gives us the ability to both parameterize and pass method calls around that can be executed at our discretion.',
+      answers: ['A. Prototype', 'B. Factory', 'C. Command', 'D. Facade'],
+      cAnswer: 'Command'
     },
-
     {
-      quesNum: 5,
-      ques:
-        'JavaScript’s reserve word ______ causes the innermost enclosing loop or switch statement to exit immediately.',
-      ansA: 'Try',
-      ansB: 'Catch',
-      ansC: 'Else',
-      ansD: 'Break',
-      corAns: 'ansD'
+      question: '5. JavaScript’s reserve word ______ causes the innermost enclosing loop or switch statement to exit immediately.',
+      answers: ['A. Try', 'B. Catch', 'C. Else', 'D. Break'],
+      cAnswer: 'Break'
     },
-
     {
-      quesNum: 6,
-      ques:
-        'Which of the following is NOT a correct way of declaring an array in JavaScript?',
-      ansA: '"var arr = [1, "two", 3 , 4 ];"',
-      ansB: 'var arr = new Array();',
-      ansC: 'var[] arr = new Number()[5];',
-      ansD: 'None of the above',
-      corAns: 'ansC'
+      question: '6. Which of the following is NOT a correct way of declaring an array in JavaScript?',
+      answers: ['A.	var arr = [1, "two", 3 , 4 ];', 'B. var arr = new Array();', 'C. var[] arr = new Number()[5];', 'D. None of the above'],
+      cAnswer: 'var[] arr = new Number()[5];'
     },
-
     {
-      quesNum: 7,
-      ques:
-        'Which of the following is true about variable naming conventions in JavaScript?',
-      ansA:
-        'You should not use any of the JavaScript reserved keyword as variable name.',
-      ansB: 'JavaScript variable names should not start with a numeral 0 − 9.',
-      ansC: 'Both of the above.',
-      ansD: 'None of the above',
-      corAns: 'ansC'
+      question: '7.	Which of the following is true about variable naming conventions in JavaScript?',
+      answers: ['A. You should not use any of the JavaScript reserved keyword as variable name', 'B.	JavaScript variable names should not start with a numeral 0 − 9.', 'C.	Both of the above.', 'D. None of the above.'],
+      cAnswer: 'Both of the above'
     },
-
     {
-      quesNum: 8,
-      ques: 'Which of the following is a valid JavaScript function?',
-      ansA: 'var myFunc = function myFunc{ };',
-      ansB: 'function myFunc(){ };',
-      ansC: 'myFunc function(){ };',
-      ansD: 'function myFunc = { };',
-      corAns: 'ansB'
+      question: '8.	Which of the following is a valid JavaScript function?',
+      answers: ['A.	var myFunc = function myFunc{ };', 'B.	function myFunc(){ };', 'C. myFunc function(){ };', 'D. function myFunc = { };'],
+      cAnswer: 'function myFunc(){ };'
     },
-
     {
-      quesNum: 9,
-      ques:
-        'Which of the following is true about variable naming conventions in JavaScript?',
-      ansA:
-        'You should not use any of the JavaScript reserved keyword as variable name.',
-      ansB: 'JavaScript variable names should not start with a numeral 0 − 9.',
-      ansC: 'Both of the above.',
-      ansD: 'None of the above.',
-      corAns: 'ansC'
+      question: '9.	Which of the following is true about variable naming conventions in JavaScript?',
+      answers: ['A. You should not use any of the JavaScript reserved keyword as variable name', 'B.	JavaScript variable names should not start with a numeral 0 − 9.', 'C.	Both of the above.', 'D. None of the above.'],
+      cAnswer: 'Both of the above'
     },
-
     {
-      quesNum: 10,
-      ques:
-        'Which built-in method combines the text of two strings and returns a new string?',
-      ansA: 'append',
-      ansB: 'concat',
-      ansC: 'attach',
-      ansD: 'None of the above.',
-      corAns: 'ansB'
+      question: '10. Which built-in method combines the text of two strings and returns a new string?',
+      answers: ['A.	end', 'B.	concat', 'C. attach', 'D. None of the above'],
+      cAnswer: 'concat'
     }
   ]);
-}
 
-ko.applyBingings(new questionViewModel());
+  var currentQuestionIndex = ko.observable(0);
 
-// reading information from the observable array
-console.log('The question array contains ' + myobservableArray().length);
+  function questionNavigation(numberOfQuestions) {
+    if (currentQuestionIndex() + numberOfQuestions >= self.questions().length) {
+      return;
+    }
+    if (currentQuestionIndex() + numberOfQuestions < 0) {
+      return;
+    }
+    currentQuestionIndex(currentQuestionIndex() + numberOfQuestions);
+  };
 
-// creating a question view model
-var quesViewModel = {
-  quesNum: ko.observabale('quesNum'),
-  ques: ko.observable('ques'),
-  ansA: ko.observable('ansA'),
-  ansB: ko.observable('ansB'),
-  ansC: ko.observable('ansC'),
-  ansD: ko.observable('ansD'),
-  corAns: ko.observable('ansA')
+  self.next = function () { questionNavigation(1); };
+  self.previous = function () { questionNavigation(-1); };
+
+  self.currentQuestion = ko.computed(function () {
+    return self.questions()[currentQuestionIndex()];
+  });
+
+  
 };
-ko.applyBingings(quesViewModel);
+ko.applyBindings(new QuizViewModel());

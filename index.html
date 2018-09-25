@@ -1,178 +1,77 @@
-<!DOCTYPE HTML>
-
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-
-  <title>JavaScript Test</title>
+  <title>JavaScript Trivia</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="keywords" content="JavaScript, test, maxwell, arrants">
+  <meta name="keywords" content="JavaScript, Test, Maxwell, Arrants">
   <meta name="authors" content="Josh Arrants, Leon Maxwell">
-  <meta name="description" content="JavaScript test with ten questions">
-  <link rel="stylesheet" href="css/site.css">
-  <link type="text/javascript" href="script/test.js">
-
-  <!-- Font Awesome link for button icons -->
-  <script src="https://use.fontawesome.com/9907c27551.js"></script>
+  <meta name="description" content="`Ten JavaScript Trivia Questions">
 
   <!-- Bootstrap Stylesheet -->
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
     crossorigin="anonymous">
 
-  <!-- JavaScript Libraries -->
-  <script src="knockout-3.4.2.js"></script>
-
 </head>
 
 <body>
 
-  <header>
-    <nav class="navbar navbar-expand-sm navbar-dark bg-primary mb-3">
-      <div class="container">
-        <a class="navbar-brand" href="#">Navbar</a>
-        <button class="navbar-toggler" data-toggle="collapse" data-target="#nav">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="nav">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Begin Test</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Test Results</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">About</a>
-            </li>
-          </ul>
+  <div class="container-fluid jumbotron text-center text-white bg-primary">
+    <h1 class="display-1">JavaScript Trivia</h1>
+  </div>
+
+  <!-- Main -->
+
+  <div role="main" class="container-fluid text-left">
+    <br />
+      <form>
+
+          <h3 data-bind="text: currentQuestion().question"></h3>
+
+          <div class="form-group">
+
+          <br/>
+
+          <div class="form-check ">
+            <input class="form-check-input" type="radio" name="radio" id="radio1" value="optionA">
+            <label data-bind="text: currentQuestion().answers[0]"></label>
+          </div>
+
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="radio" id="radio2" value="optionB">
+            <label data-bind="text: currentQuestion().answers[1]"></label>
+          </div>
+
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="radio" id="radio3" value="optionC">
+            <label data-bind="text: currentQuestion().answers[2]"></label>
+          </div>
+
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="radio" id="radio4" value="optionD">
+            <label data-bind="text: currentQuestion().answers[3]"></label>
+          </div>
+
         </div>
-      </div>
-    </nav>
 
-  </header>
+        <br/>
 
+        <div class="text-center">
+          <button type="button" class="btn btn-primary btn-lg" data-bind="click: previous">Previous</button>
+          <button type="button" class="btn btn-primary btn-lg" data-bind="click: next">Next</button>
+        </div>  
 
-  <h2 class="container-fluid">Arrants/Maxwell JavaScript Test</h2>
-
-
-  <!-- Question with bootstrap theme (trying to data bind) -->
-  <div class="input-group mb-3">
-    <div class="input-group-prepend">
-      <span class="input-group-text">Question</span>
     </div>
-    <input class="form-control" type="text" data-bind="value: question" id="txtQuestion">
+    </form>
   </div>
 
   <br>
 
-  <!-- end question with bootstrap theme -->
+  <footer>
 
-  <br>
-  <div class="form-group">
-    <!-- Answer A -->
-    <div class="input-group mb-3">
-      <div class="input-group-prepend">
-        <span class="input-group-text">
-          A.
-        </span>
-      </div>
-      <div class="radio input-group-prepend">
-        <div class="input-group-text">
-          <input type="radio">
-        </div>
-      </div>
-      <input type="text" class="form-control" data-bind="value: answerA" id="answerA">
-    </div>
-    <!-- End answer A -->
+  </footer>
 
-    <!-- Answer B -->
-    <div class="input-group mb-3">
-      <div class="input-group-prepend">
-        <span class="input-group-text">
-          B.
-        </span>
-      </div>
-      <div class="radio input-group-prepend">
-        <div class="input-group-text">
-          <input type="radio">
-        </div>
-      </div>
-      <input type="text" class="form-control" data-bind="value: answerB" id="answerB">
-    </div>
-    <!-- End answer B -->
-
-    <!-- Answer C -->
-    <div class="input-group mb-3">
-      <div class="input-group-prepend">
-        <span class="input-group-text">
-          C.
-        </span>
-      </div>
-      <div class="radio input-group-prepend">
-        <div class="input-group-text">
-          <input type="radio">
-        </div>
-      </div>
-      <input type="text" class="form-control" data-bind="value: answerC" id="answerC">
-    </div>
-    <!-- End answer C -->
-
-    <!-- Answer D -->
-    <div class="input-group mb-3">
-      <div class="input-group-prepend">
-        <span class="input-group-text">
-          D.
-        </span>
-      </div>
-      <div class="radio input-group-prepend">
-        <div class="input-group-text">
-          <input type="radio">
-        </div>
-      </div>
-      <input type="text" class="form-control" data-bind="value: answerD" id="answerD">
-    </div>
-    <!-- End answer D -->
-  </div>
-
-
-  <div class="btn-group container-fluid justify-content-center m-3">
-    <button type="submit" class="btn btn-primary btn-lg">Submit</button>
-  </div>
-
-  <div class="btn-group container-fluid justify-content-center m-3">
-    <button type="button" class="btn btn-outline-secondary">Previous</button>
-    <button type="button" class="btn btn-outline-primary">Next</button>
-  </div>
-
-  <!-- Latest compiled and minified JavaScript -->
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-    crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
-    crossorigin="anonymous"></script>
-
-  <script>
-
-    function QuestionViewModel() {
-
-      this.question = ko.observable("What pattern in JavaScript restricts instantiation of a class to a single object?");
-      this.answerA = ko.observable("Constructor Pattern");
-      this.answerB = ko.observable("Singleton Pattern");
-      this.answerC = ko.observable("Prototype Pattern");
-      this.answerD = ko.observable("Mixin Pattern");
-      this.correctAnswer = ko.observable("answerB");
-    }
-
-    ko.applyBindings(new QuestionViewModel());
-
-  </script>
-
-
+  <script src="script/knockout-3.4.2.js"></script>
+  <script src="script/test.js"></script>
 
 </body>
-
-</html>
