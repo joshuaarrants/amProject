@@ -24,46 +24,67 @@
 
   <div role="main" class="container text-left">
     <br />
-      <form data-bind="submit: submitQuiz">
 
-          <h3 data-bind="text: currentQuestion().question"></h3>
+    <form data-bind="submit: submitQuiz">
 
-          <div class="form-group">
+      <h3 data-bind="text: currentQuestion().question"></h3>
 
-          <br/>
+      <div class="form-group">
 
-          <div class="form-check ">
-            <input class="form-check-input" type="radio" name="radio" id="radio1" value="A">A. 
-            <label data-bind="text: currentQuestion().answers.A"></label>
-          </div>
+        <br />
 
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="radio" id="radio2" value="B">B. 
-            <label data-bind="text: currentQuestion().answers.B"></label>
-          </div>
-
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="radio" id="radio3" value="C">C. 
-            <label data-bind="text: currentQuestion().answers.C"></label>
-          </div>
-
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="radio" id="radio4" value="D">D. 
-            <label data-bind="text: currentQuestion().answers.D"></label>
-          </div>
-
+        <div class="form-check ">
+          <input class="form-check-input" type="radio" name="radio" id="radio1" value="A">A.
+          <label data-bind="text: currentQuestion().answers.A"></label>
         </div>
 
-        <br/>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="radio" id="radio2" value="B">B.
+          <label data-bind="text: currentQuestion().answers.B"></label>
+        </div>
 
-        <div class="text-center">
-          <button type="button" class="btn btn-primary btn-lg" data-bind="click: previous">Previous</button>
-          <button type="button" class="btn btn-primary btn-lg" data-bind="click: next">Next</button>
-          <button type="submit" class="btn btn-primary btn-lg">Submit</button>
-        </div>  
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="radio" id="radio3" value="C">C.
+          <label data-bind="text: currentQuestion().answers.C"></label>
+        </div>
 
-    </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="radio" id="radio4" value="D">D.
+          <label data-bind="text: currentQuestion().answers.D"></label>
+        </div>
+
+      </div>
+
+      <br />
+
+      <div class="text-center">
+        <button type="button" class="btn btn-primary btn-lg" data-bind="click: previous">Previous</button>
+        <button type="button" class="btn btn-primary btn-lg" data-bind="click: next">Next</button>
+        <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+      </div>
     </form>
+  </div>
+
+  <br />
+
+  <div class="container text-left">
+    <h4></h4>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Questions</th>
+          <th scope="col">Selected Answer</th>
+          <th scope="col">Correct Answer</th>
+        </tr>
+      </thead>
+      <tbody data-bind="foreach: questions">
+        <tr>
+          <td data-bind="text: question"></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 
   <br>

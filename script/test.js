@@ -76,6 +76,14 @@
     return self.questions()[currentQuestionIndex()];
   });
 
+  //push the selected input radio value into an array
+
+  //push the correct answer from the questions array into an array
+  
+  //compare the selected radio value and the questions array corrent answer
+
+  //output the results
+
   // executed when the submit button is clicked
   self.submitQuiz = function(){
 
