@@ -77,5 +77,7 @@
     return self.questions()[currentQuestionIndex()];
   });
 
+  selectedAnswer = ko.observable("A")
+
 };
 ko.applyBindings(new QuizViewModel());
